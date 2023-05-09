@@ -1,0 +1,33 @@
+body {
+    overflow: hidden;
+    min-height: 100vh;
+    cursor: crosshair;
+    background-color: darkslategrey;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 300px;
+    background: rgb(255, 166, 0, 0.5);
+    opacity: 0;
+    animation: anim 8s forwards;
+    filter: hue-rotate(135deg);
+}
+
+@keyframes anim {
+    to {
+        top: -250px;
+        left: var(--left);
+        opacity: 1;
+        filter: hue-rotate(90deg);
+    }
+}
+
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    color: rgb(25, 154, 158);
+    text-shadow: 0 0 10px black;
+    z-index: -1;
+}
